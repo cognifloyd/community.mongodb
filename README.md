@@ -13,6 +13,43 @@ The modules present in Ansible 2.9 are included in this collection and will bene
 
 As this is an independent Collection, it can be release on it's own release cadance.
 
+## Modules
+
+These are the modules that are available in this collection (\* = was included in ansible before 2.10):
+
+- mongodb_balancer: Manages the MongoDB Sharded Cluster Balancer.
+- mongodb_index: Creates or drops indexes on MongoDB collections.
+- mongodb_info: Gather information about MongoDB instance.
+- mongodb_maintenance: Enables or disables maintenance mode for a secondary member.
+- mongodb_oplog: Resizes the MongoDB oplog.
+- mongodb_parameter: \*Change an administrative parameter on a MongoDB server.
+- mongodb_replicaset: \*Initialises a MongoDB replicaset.
+- mongodb_shard: \*Add or remove shards from a MongoDB Cluster.
+- mongodb_shell: Run commands via the MongoDB shell.
+- mongodb_shutdown: Cleans up all database resources and then terminates the mongod/mongos process.
+- mongodb_status: Validates the status of the cluster.
+- mongodb_stepdown: Step down the MongoDB node from a PRIMARY state.
+- mongodb_user: \*Adds or removes a user from a MongoDB database.
+
+## Plugins
+
+These plugins are available in this collection (\* = was included in ansible before 2.10):
+
+- mongodb (lookup plugin): \*lookup info from MongoDB
+- mongodb (cache plugin): \*Use MongoDB for caching
+
+## Roles
+
+These are the roles that are available in this collection:
+
+- mongodb_linux: Configure misc linux settings recommended for MongoDB
+- mongodb_selinux: Configure SELinux for MongoDB
+- mongodb_repository: Add MongoDB package repository
+- mongodb_install: Install MongoDB packages via mongodb-org meta-package.
+- mongodb_mongod: Setup a MongoDB replicaset
+- mongodb_mongos: Setup a mongos server for a MongoDB sharded cluster
+- mongodb_config: Set up a CSRS Config Server Replicaset for a MongoDB sharded cluster
+
 ## Running the integration tests
 
 Clone the collection git project. The ansible-test tool requires a specific directory setup to function correctly so please follow carefully.
