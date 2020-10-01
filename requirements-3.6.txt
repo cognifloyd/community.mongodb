@@ -2,7 +2,12 @@ ansible==2.9.13
 ansible-lint==4.2.0
 docker==4.1.0
 flake8==3.7.9
-molecule==2.22
+#molecule==3.0.8
+# PR 2851
+git+git://github.com/cognifloyd/molecule@travis-folding#egg=molecule
+molecule-docker==0.1
 pytest==5.3.4
 python-vagrant==0.5.15
 sh==1.13.1
+testinfra==3.4.0
+yamllint==1.25.0

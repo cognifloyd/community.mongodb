@@ -3,11 +3,11 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint:
-  name: yamllint
-  options:
-    config-data:
-      line-length: disable
+lint: |
+  set -e
+  yamllint --strict .
+  # ansible-lint
+  flake8 --ignore=E501
 platforms:
   - name: centos_7
     image: centos:7
@@ -39,12 +39,5 @@ platforms:
     privileged: True
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
-    enabled: false
 verifier:
   name: testinfra
-  lint:
-    name: flake8
-    options:
-      ignore: 'E501'
